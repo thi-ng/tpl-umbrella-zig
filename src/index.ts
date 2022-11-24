@@ -1,4 +1,5 @@
 import type { Fn0 } from "@thi.ng/api";
+import { ConsoleLogger, LogLevel, NULL_LOGGER } from "@thi.ng/logger";
 import { IWasmAPI, WasmBridge, WasmExports } from "@thi.ng/wasm-api";
 import { DOMExports, WasmDom } from "@thi.ng/wasm-api-dom";
 import { ScheduleExports, WasmSchedule } from "@thi.ng/wasm-api-schedule";
@@ -51,12 +52,15 @@ class DummyModule implements IWasmAPI<any> {
 // main app initialization
 
 (async () => {
-    // create WASM bridge with extra API modules
-    const bridge = new WasmBridge<WasmApp>([
-        new DummyModule(),
-        new WasmDom(),
-        new WasmSchedule(),
-    ]);
+    // create WASM bridge
+    const bridge = new WasmBridge<WasmApp>(
+        // ...with extra API modules
+        [new DummyModule(), new WasmDom(), new WasmSchedule()],
+        // custom logger
+        new ConsoleLogger("wasm", LogLevel.INFO)
+        // (or uncomment below to disable all logging instead)
+        // NULL_LOGGER
+    );
     // instantiate WASM module & bindings
     await bridge.instantiate(fetch(WASM_URL));
     // call WASM main function to kick off
