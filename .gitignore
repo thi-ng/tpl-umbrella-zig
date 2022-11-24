@@ -3,6 +3,7 @@
 /zig-cache
 /zig-out
 
-*.wast
 *.o
+*.wasm
+*.wast
 wasm-types-analysis.json
