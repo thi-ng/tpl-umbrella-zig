@@ -1,0 +1,12 @@
+[
+    {
+        "name": "StyleConfig",
+        "type": "struct",
+        "doc": "Style configuration settings",
+        "fields": [
+            { "name": "bg", "type": "string", "doc": "CSS background color" },
+            { "name": "font", "type": "string", "doc": "Font family" },
+            { "name": "size", "type": "u8", "doc": "Font size in pixels" }
+        ]
+    }
+]

@@ -1,0 +1,8 @@
+/dist
+/export
+/zig-cache
+/zig-out
+
+*.wast
+*.o
+wasm-types-analysis.json
