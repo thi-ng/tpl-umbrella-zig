@@ -38,7 +38,10 @@ yarn build
 yarn preview
 ```
 
-**Note:** The only Zig versions >= 0.10.0 are supported...
+## Requirements
+
+-   [Zig](https://ziglang.org) versions >= 0.10.0
+-   [Binaryen](https://github.com/WebAssembly/binaryen)
 
 ## License
 
