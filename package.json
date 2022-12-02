@@ -20,10 +20,10 @@
     "dependencies": {
         "@thi.ng/api": "^8.5.1",
         "@thi.ng/logger": "^1.4.4",
-        "@thi.ng/wasm-api": "^1.2.0",
-        "@thi.ng/wasm-api-bindgen": "^0.2.3",
-        "@thi.ng/wasm-api-dom": "^0.11.3",
-        "@thi.ng/wasm-api-schedule": "^0.3.3"
+        "@thi.ng/wasm-api": "^1.2.1",
+        "@thi.ng/wasm-api-bindgen": "^0.2.4",
+        "@thi.ng/wasm-api-dom": "^0.11.4",
+        "@thi.ng/wasm-api-schedule": "^0.3.4"
     },
     "browser": {
         "process": false

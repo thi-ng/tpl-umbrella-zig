@@ -154,10 +154,10 @@
     "@thi.ng/hex" "^2.3.1"
     "@thi.ng/memoize" "^3.1.18"
 
-"@thi.ng/wasm-api-bindgen@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api-bindgen/-/wasm-api-bindgen-0.2.3.tgz#0ffae3af978b58ea2778297c6ff58a9555e16b3f"
-  integrity sha512-qmrn8KXRaMV5bywTmW+UfltxHm2vYIrvXanxmCu2EU2k3IkaPgvkno/AhpuKhMaRN6Ll9p4E8BD51wqcg7zqRw==
+"@thi.ng/wasm-api-bindgen@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api-bindgen/-/wasm-api-bindgen-0.2.4.tgz#e73b6cea0f64739513d0daf98f52679930d3ed5f"
+  integrity sha512-rPfppITQqjl4j2jKR3gvkFKRuO6Bhj0rqRTJ1xqCZp0sPONFSB+GhLHoDA2dbXJf8rFf1UJj8TAI83eCL0EG8Q==
   dependencies:
     "@thi.ng/api" "^8.5.1"
     "@thi.ng/args" "^2.2.11"
@@ -171,33 +171,31 @@
     "@thi.ng/logger" "^1.4.4"
     "@thi.ng/paths" "^5.1.24"
     "@thi.ng/strings" "^3.3.19"
-    "@thi.ng/wasm-api" "^1.2.0"
+    "@thi.ng/wasm-api" "^1.2.1"
 
-"@thi.ng/wasm-api-dom@^0.11.3":
-  version "0.11.3"
-  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api-dom/-/wasm-api-dom-0.11.3.tgz#2d189803e151ba5c6b8634aff7d66300e17ed1b9"
-  integrity sha512-6oVeGeB6csIwXBMDDQTT3OnIe2L4hNbr73CdjepFcEE1iZJPiCLro4Jutmb0qZRkk0kE8bJP59ZZZOqAO6Qbqw==
+"@thi.ng/wasm-api-dom@^0.11.4":
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api-dom/-/wasm-api-dom-0.11.4.tgz#97881c5794e1ea3355f280f7b542929fc1b82668"
+  integrity sha512-RcSLjnnQ9EMV5MbFiJpZx4ehME+Y7mfFMaFDloILZ4C2wH2RwhqKackay9u5wLboMpZq9Ea0lnyWHU14vdybew==
   dependencies:
     "@thi.ng/adapt-dpi" "^2.2.3"
     "@thi.ng/api" "^8.5.1"
     "@thi.ng/errors" "^2.2.5"
     "@thi.ng/prefixes" "^2.1.14"
-    "@thi.ng/wasm-api" "^1.2.0"
-    "@thi.ng/wasm-api-bindgen" "^0.2.3"
+    "@thi.ng/wasm-api" "^1.2.1"
 
-"@thi.ng/wasm-api-schedule@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api-schedule/-/wasm-api-schedule-0.3.3.tgz#423675802a79d7ec153746a62359a24c2b12b9cb"
-  integrity sha512-hzg6cRRpCevUWX0e0xu4vLAgbGbrjVBPlvS/STWJ9EQl2wEuCN73O359EH5gBSLASObjAMeZy6kDGzPVUxRofQ==
+"@thi.ng/wasm-api-schedule@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api-schedule/-/wasm-api-schedule-0.3.4.tgz#40abb0ee8ea8a5d1d33a528fa034aaff93f0b6b6"
+  integrity sha512-aevXvShI0mVdQkm0m82xZi42nR7ZxnR1YASukdtgJLMz8HTGe5+KSzrX7SVXZqVnZmZLHWgRGEkeHjtnEvASbA==
   dependencies:
     "@thi.ng/api" "^8.5.1"
-    "@thi.ng/wasm-api" "^1.2.0"
-    "@thi.ng/wasm-api-bindgen" "^0.2.3"
+    "@thi.ng/wasm-api" "^1.2.1"
 
-"@thi.ng/wasm-api@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api/-/wasm-api-1.2.0.tgz#25b61b2d1f30c79a264bba6c507798a143f9df01"
-  integrity sha512-Ht0DqzaS41H2XdlMC+ArSYkRAXWzL4fHGlnuEl+PcNM3wYxl7kugY/iz+RiUxrBCMzoEfhv+occy/GIsnLqmzQ==
+"@thi.ng/wasm-api@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@thi.ng/wasm-api/-/wasm-api-1.2.1.tgz#2ad7171d1cb391700749258de72414e2b2884b8a"
+  integrity sha512-kWptTKYPHQF/SyIM5WpEgKOYQby3XMviJ+mmYiRSNhVx/VGGmIV0U/b+PgRtdpOBOpcdlgv6kRyxG2o7RgCnLA==
   dependencies:
     "@thi.ng/api" "^8.5.1"
     "@thi.ng/arrays" "^2.4.4"
