@@ -1,8 +1,8 @@
 const std = @import("std");
-const wasm = @import("wasmapi");
-const wasmtypes = @import("wasmapi-types");
-const dom = @import("dom");
-const schedule = @import("schedule").schedule;
+const wasm = @import("wasm-api");
+const bindgen = @import("wasm-api-bindgen");
+const dom = @import("wasm-api-dom");
+const schedule = @import("wasm-api-schedule").schedule;
 
 // expose thi.ng/wasm-api core API (incl. panic handler & allocation fns)
 pub usingnamespace wasm;
@@ -14,6 +14,14 @@ pub usingnamespace wasm;
 // https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-schedule/zig/lib.zig
 var gpa = std.heap.GeneralPurposeAllocator(.{}){};
 pub const WASM_ALLOCATOR = gpa.allocator();
+
+// empty stub (only needed for debug builds)
+pub fn log(
+    comptime _: std.log.Level,
+    comptime _: @Type(.EnumLiteral),
+    comptime _: []const u8,
+    _: anytype,
+) void {}
 
 /// Since various initialization functions can return errors
 /// we're bundling them all in a single fn, which is then called by start()

@@ -7,9 +7,10 @@
     "license": "MIT",
     "scripts": {
         "start": "yarn build:zig && vite --open",
-        "build": "tsc && yarn build:zig && vite build --base='./'",
+        "build": "tsc && yarn build:zig-prod && vite build --base='./'",
         "build:types": "npx wasm-api-bindgen -a wasm-types-analysis.json --lang ts -o src/generated/types.ts --lang zig -o zig/generated/types.zig src/typedefs.json",
         "build:zig": "zig build && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
+        "build:zig-prod": "zig build -Drelease-small && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
         "preview": "vite preview --host --open"
     },
     "devDependencies": {
@@ -17,12 +18,12 @@
         "vite": "^3.2.2"
     },
     "dependencies": {
-        "@thi.ng/api": "^8.4.6",
-        "@thi.ng/logger": "^1.4.3",
-        "@thi.ng/wasm-api": "^1.0.1",
-        "@thi.ng/wasm-api-bindgen": "^0.2.0",
-        "@thi.ng/wasm-api-dom": "^0.11.0",
-        "@thi.ng/wasm-api-schedule": "^0.3.0"
+        "@thi.ng/api": "^8.5.1",
+        "@thi.ng/logger": "^1.4.4",
+        "@thi.ng/wasm-api": "^1.2.0",
+        "@thi.ng/wasm-api-bindgen": "^0.2.3",
+        "@thi.ng/wasm-api-dom": "^0.11.3",
+        "@thi.ng/wasm-api-schedule": "^0.3.3"
     },
     "browser": {
         "process": false

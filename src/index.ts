@@ -1,12 +1,12 @@
 import type { Fn0 } from "@thi.ng/api";
 import { ConsoleLogger, LogLevel, NULL_LOGGER } from "@thi.ng/logger";
 import { IWasmAPI, WasmBridge, WasmExports } from "@thi.ng/wasm-api";
-import { DOMExports, WasmDom } from "@thi.ng/wasm-api-dom";
-import { ScheduleExports, WasmSchedule } from "@thi.ng/wasm-api-schedule";
+import { WasmDom, WasmDomExports } from "@thi.ng/wasm-api-dom";
+import { WasmSchedule, WasmScheduleExports } from "@thi.ng/wasm-api-schedule";
 import { $StyleConfig } from "./generated/types";
 import WASM_URL from "./main.wasm?url";
 
-interface WasmApp extends WasmExports, DOMExports, ScheduleExports {
+interface WasmApp extends WasmExports, WasmDomExports, WasmScheduleExports {
     /**
      * Exposed function in WASM module (see /zig/main.zig)
      */
@@ -56,7 +56,7 @@ class DummyModule implements IWasmAPI<any> {
     const bridge = new WasmBridge<WasmApp>(
         // ...with extra API modules
         [new DummyModule(), new WasmDom(), new WasmSchedule()],
-        // custom logger
+        // (optional, custom logger)
         new ConsoleLogger("wasm", LogLevel.INFO)
         // (or uncomment below to disable all logging instead)
         // NULL_LOGGER
