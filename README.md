@@ -43,6 +43,14 @@ yarn preview
 -   [Zig](https://ziglang.org) versions >= 0.10.0
 -   [Binaryen](https://github.com/WebAssembly/binaryen)
 
+## Notes
+
+This template pulls in more dependencies than needed for the runtime of your
+app. Most of these additional packages are only required by the
+[@thi.ng/wasm-api-bindgen](https://github.com/thi-ng/umbrella/tree/develop/packages/wasm-api-bindgen)
+CLI tool to generate source code for types shared between the WASM/JS side...
+Feel free to remove that package if you're not making use of code generation.
+
 ## License
 
 This project is licensed under the MIT License. See LICENSE.txt
