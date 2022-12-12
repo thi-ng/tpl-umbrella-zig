@@ -6,7 +6,17 @@
         "fields": [
             { "name": "bg", "type": "string", "doc": "CSS background color" },
             { "name": "font", "type": "string", "doc": "Font family" },
-            { "name": "size", "type": "u8", "doc": "Font size in pixels" }
+            { "name": "size", "type": "FontSize", "doc": "Font size enum" }
+        ]
+    },
+    {
+        "name": "FontSize",
+        "type": "enum",
+        "tag": "u8",
+        "values": [
+            { "name": "small", "value": 14 },
+            { "name": "medium", "value": 18 },
+            { "name": "large", "value": 24 }
         ]
     }
 ]

@@ -48,9 +48,9 @@ export fn start() void {
 const types = @import("generated/types.zig");
 
 const styles = [_]types.StyleConfig{
-    .{ .bg = "yellow", .font = "serif", .size = 14 },
-    .{ .bg = "cyan", .font = "monospace", .size = 18 },
-    .{ .bg = "magenta", .font = "sans-serif", .size = 24 },
+    .{ .bg = "yellow", .font = "serif", .size = .small },
+    .{ .bg = "cyan", .font = "monospace", .size = .medium },
+    .{ .bg = "magenta", .font = "sans-serif", .size = .large },
 };
 
 var styleID: usize = 0;
