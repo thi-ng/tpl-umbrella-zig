@@ -1,9 +1,9 @@
 {
-    "name": "@thi.ng/tpl-umbrella-zig",
+    "name": "TODO",
     "version": "0.0.1",
     "description": "TODO",
-    "repository": "https://github.com/thi-ng/tpl-umbrella-zig",
-    "author": "Karsten Schmidt <k+npm@thi.ng>",
+    "repository": "https://github.com/TODO/TODO",
+    "author": "TODO",
     "license": "MIT",
     "scripts": {
         "start": "yarn build:zig && vite --open",
@@ -14,18 +14,25 @@
         "preview": "vite preview --host --open"
     },
     "devDependencies": {
-        "typescript": "^4.8.4",
-        "vite": "^3.2.2"
+        "typescript": "^4.9.4",
+        "vite": "^4.0.0"
     },
     "dependencies": {
         "@thi.ng/api": "^8.5.1",
         "@thi.ng/logger": "^1.4.4",
-        "@thi.ng/wasm-api": "^1.2.1",
-        "@thi.ng/wasm-api-bindgen": "^0.2.4",
-        "@thi.ng/wasm-api-dom": "^0.11.4",
-        "@thi.ng/wasm-api-schedule": "^0.3.4"
+        "@thi.ng/wasm-api": "^1.2.2",
+        "@thi.ng/wasm-api-bindgen": "^0.2.5",
+        "@thi.ng/wasm-api-dom": "^0.11.6",
+        "@thi.ng/wasm-api-schedule": "^0.3.6"
     },
     "browser": {
         "process": false
-    }
+    },
+    "keywords": [
+        "hybrid",
+        "typescript",
+        "wasm",
+        "webassembly",
+        "ziglang"
+    ]
 }
