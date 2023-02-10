@@ -7,10 +7,10 @@ import { $StyleConfig } from "./generated/types";
 import WASM_URL from "./main.wasm?url";
 
 interface WasmApp extends WasmExports, WasmDomExports, WasmScheduleExports {
-    /**
-     * Exposed function in WASM module (see /zig/main.zig)
-     */
-    start: Fn0<void>;
+	/**
+	 * Exposed function in WASM module (see /zig/main.zig)
+	 */
+	start: Fn0<void>;
 }
 
 /**
@@ -18,51 +18,51 @@ interface WasmApp extends WasmExports, WasmDomExports, WasmScheduleExports {
  * your own... See https://thi.ng/wasm-api for details/usage.
  */
 class DummyModule implements IWasmAPI<any> {
-    /**
-     * Module ID, used to avoid namespace clashes in WASM imports
-     */
-    readonly id = "dummy";
+	/**
+	 * Module ID, used to avoid namespace clashes in WASM imports
+	 */
+	readonly id = "dummy";
 
-    parent!: WasmBridge<WasmApp>;
+	parent!: WasmBridge<WasmApp>;
 
-    async init(parent: WasmBridge<WasmApp>) {
-        this.parent = parent;
-        return true;
-    }
+	async init(parent: WasmBridge<WasmApp>) {
+		this.parent = parent;
+		return true;
+	}
 
-    /**
-     * Functions returned here will be imported & exposed in the WASM module.
-     */
-    getImports() {
-        return {
-            setStyle: (addr: number) => {
-                // instantiate memory mapped StyleConfig
-                const config = $StyleConfig(this.parent).instance(addr);
-                const css = [
-                    `background: ${config.bg.deref()}`,
-                    `font-family: ${config.font.deref()}`,
-                    `font-size: ${config.size}px`,
-                ];
-                document.body.style.cssText = css.join(";");
-            },
-        };
-    }
+	/**
+	 * Functions returned here will be imported & exposed in the WASM module.
+	 */
+	getImports() {
+		return {
+			setStyle: (addr: number) => {
+				// instantiate memory mapped StyleConfig
+				const config = $StyleConfig(this.parent).instance(addr);
+				const css = [
+					`background: ${config.bg.deref()}`,
+					`font-family: ${config.font.deref()}`,
+					`font-size: ${config.size}px`,
+				];
+				document.body.style.cssText = css.join(";");
+			},
+		};
+	}
 }
 
 // main app initialization
 
 (async () => {
-    // create WASM bridge
-    const bridge = new WasmBridge<WasmApp>(
-        // ...with extra API modules
-        [new DummyModule(), new WasmDom(), new WasmSchedule()],
-        // (optional, custom logger)
-        new ConsoleLogger("wasm", LogLevel.INFO)
-        // (or uncomment below to disable all logging instead)
-        // NULL_LOGGER
-    );
-    // instantiate WASM module & bindings
-    await bridge.instantiate(fetch(WASM_URL));
-    // call WASM main function to kick off
-    bridge.exports.start();
+	// create WASM bridge
+	const bridge = new WasmBridge<WasmApp>(
+		// ...with extra API modules
+		[new DummyModule(), new WasmDom(), new WasmSchedule()],
+		// (optional, custom logger)
+		new ConsoleLogger("wasm", LogLevel.INFO)
+		// (or uncomment below to disable all logging instead)
+		// NULL_LOGGER
+	);
+	// instantiate WASM module & bindings
+	await bridge.instantiate(fetch(WASM_URL));
+	// call WASM main function to kick off
+	bridge.exports.start();
 })();

@@ -1,22 +1,22 @@
 [
-    {
-        "name": "StyleConfig",
-        "type": "struct",
-        "doc": "Style configuration settings",
-        "fields": [
-            { "name": "bg", "type": "string", "doc": "CSS background color" },
-            { "name": "font", "type": "string", "doc": "Font family" },
-            { "name": "size", "type": "FontSize", "doc": "Font size enum" }
-        ]
-    },
-    {
-        "name": "FontSize",
-        "type": "enum",
-        "tag": "u8",
-        "values": [
-            { "name": "small", "value": 14 },
-            { "name": "medium", "value": 18 },
-            { "name": "large", "value": 24 }
-        ]
-    }
+	{
+		"name": "StyleConfig",
+		"type": "struct",
+		"doc": "Style configuration settings",
+		"fields": [
+			{ "name": "bg", "type": "string", "doc": "CSS background color" },
+			{ "name": "font", "type": "string", "doc": "Font family" },
+			{ "name": "size", "type": "FontSize", "doc": "Font size enum" }
+		]
+	},
+	{
+		"name": "FontSize",
+		"type": "enum",
+		"tag": "u8",
+		"values": [
+			{ "name": "small", "value": 14 },
+			{ "name": "medium", "value": 18 },
+			{ "name": "large", "value": 24 }
+		]
+	}
 ]
