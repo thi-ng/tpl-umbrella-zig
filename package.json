@@ -1,38 +1,39 @@
 {
-    "name": "TODO",
-    "version": "0.0.1",
-    "description": "TODO",
-    "repository": "https://github.com/TODO/TODO",
-    "author": "TODO",
-    "license": "MIT",
-    "scripts": {
-        "start": "yarn build:zig && vite --open",
-        "build": "tsc && yarn build:zig-prod && vite build --base='./'",
-        "build:types": "npx wasm-api-bindgen -a wasm-types-analysis.json --lang ts -o src/generated/types.ts --lang zig -o zig/generated/types.zig src/typedefs.json",
-        "build:zig": "zig build && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
-        "build:zig-prod": "zig build -Drelease-small && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
-        "preview": "vite preview --host --open"
-    },
-    "devDependencies": {
-        "typescript": "^4.9.4",
-        "vite": "^4.0.0"
-    },
-    "dependencies": {
-        "@thi.ng/api": "^8.5.1",
-        "@thi.ng/logger": "^1.4.4",
-        "@thi.ng/wasm-api": "^1.2.2",
-        "@thi.ng/wasm-api-bindgen": "^0.2.5",
-        "@thi.ng/wasm-api-dom": "^0.11.6",
-        "@thi.ng/wasm-api-schedule": "^0.3.6"
-    },
-    "browser": {
-        "process": false
-    },
-    "keywords": [
-        "hybrid",
-        "typescript",
-        "wasm",
-        "webassembly",
-        "ziglang"
-    ]
+	"name": "TODO",
+	"version": "0.0.1",
+	"description": "TODO",
+	"repository": "https://github.com/TODO/TODO",
+	"author": "TODO",
+	"license": "MIT",
+	"scripts": {
+		"start": "yarn build:zig && vite --open",
+		"build": "tsc && yarn build:zig-prod && vite build --base='./'",
+		"build:types": "npx wasm-api-bindgen -a wasm-types-analysis.json --lang ts -o src/generated/types.ts --lang zig -o zig/generated/types.zig src/typedefs.json",
+		"build:zig": "zig build && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
+		"build:zig-prod": "zig build -Drelease-small && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
+		"preview": "vite preview --host --open"
+	},
+	"devDependencies": {
+		"typescript": "^4.9.5",
+		"vite": "^4.1.1",
+		"vite-plugin-html": "^3.2.0"
+	},
+	"dependencies": {
+		"@thi.ng/api": "^8.7.2",
+		"@thi.ng/logger": "^1.4.9",
+		"@thi.ng/wasm-api": "^1.3.2",
+		"@thi.ng/wasm-api-bindgen": "^0.3.2",
+		"@thi.ng/wasm-api-dom": "^0.11.14",
+		"@thi.ng/wasm-api-schedule": "^0.3.14"
+	},
+	"browser": {
+		"process": false
+	},
+	"keywords": [
+		"hybrid",
+		"typescript",
+		"wasm",
+		"webassembly",
+		"ziglang"
+	]
 }
