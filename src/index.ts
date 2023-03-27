@@ -1,8 +1,11 @@
 import type { Fn0 } from "@thi.ng/api";
-import { ConsoleLogger, LogLevel, NULL_LOGGER } from "@thi.ng/logger";
-import { IWasmAPI, WasmBridge, WasmExports } from "@thi.ng/wasm-api";
-import { WasmDom, WasmDomExports } from "@thi.ng/wasm-api-dom";
-import { WasmSchedule, WasmScheduleExports } from "@thi.ng/wasm-api-schedule";
+import { ConsoleLogger, LogLevel } from "@thi.ng/logger";
+import { WasmBridge, type IWasmAPI, type WasmExports } from "@thi.ng/wasm-api";
+import { WasmDom, type WasmDomExports } from "@thi.ng/wasm-api-dom";
+import {
+	WasmSchedule,
+	type WasmScheduleExports,
+} from "@thi.ng/wasm-api-schedule";
 import { $StyleConfig } from "./generated/types";
 import WASM_URL from "./main.wasm?url";
 
