@@ -10,21 +10,21 @@
 		"build": "tsc && yarn build:zig-prod && vite build --base='./'",
 		"build:types": "npx wasm-api-bindgen -a wasm-types-analysis.json --lang ts -o src/generated/types.ts --lang zig -o zig/generated/types.zig src/typedefs.json",
 		"build:zig": "zig build && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
-		"build:zig-prod": "zig build -Drelease-small && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
+		"build:zig-prod": "zig build -Doptimize=ReleaseSmall && wasm-opt src/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
 		"preview": "vite preview --host --open"
 	},
 	"devDependencies": {
-		"typescript": "^4.9.5",
-		"vite": "^4.1.4",
+		"typescript": "^5.0.2",
+		"vite": "^4.2.1",
 		"vite-plugin-html": "^3.2.0"
 	},
 	"dependencies": {
-		"@thi.ng/api": "^8.7.3",
-		"@thi.ng/logger": "^1.4.9",
-		"@thi.ng/wasm-api": "^1.4.1",
-		"@thi.ng/wasm-api-bindgen": "^0.3.5",
-		"@thi.ng/wasm-api-dom": "^0.11.16",
-		"@thi.ng/wasm-api-schedule": "^0.3.16"
+		"@thi.ng/api": "^8.7.5",
+		"@thi.ng/logger": "^1.4.12",
+		"@thi.ng/wasm-api": "^1.4.5",
+		"@thi.ng/wasm-api-bindgen": "^0.4.0",
+		"@thi.ng/wasm-api-dom": "^0.11.20",
+		"@thi.ng/wasm-api-schedule": "^0.3.20"
 	},
 	"browser": {
 		"process": false
