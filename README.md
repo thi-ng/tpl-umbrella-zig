@@ -40,10 +40,31 @@ yarn preview
 
 ## Requirements
 
+This template is configured for recent dev versions (0.11.0-dev-xxxx) of Zig,
+which have several differences to the previous build system (v0.10.1 or
+earlier). You can download the latest version from the Zig website or (my own
+preferred method) using [asdf](https://asdf-vm.com/) to install it (even just
+locally for this project):
+
+```bash
+# asdf supports multiple versions of a tool, here to install latest dev version
+asdf install zig master
+
+# global use of that version
+asdf global zig master
+
+# only use that version in this project
+asdf local zig master
+```
+
 -   [Zig](https://ziglang.org) v0.11-dev versions (by default) or v0.10, see
     [important
     differences](https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api/README.md#using-the-zig-build-system))
 -   [Binaryen](https://github.com/WebAssembly/binaryen)
+
+Please see the comments in
+[build.zig](https://github.com/thi-ng/tpl-umbrella-zig/blob/main/build.zig) for
+more details...
 
 ## Notes
 
@@ -58,4 +79,4 @@ generation.
 
 This project is licensed under the MIT License. See LICENSE.txt
 
-&copy; 2022 Karsten Schmidt
+&copy; 2022 - 2023 Karsten Schmidt
