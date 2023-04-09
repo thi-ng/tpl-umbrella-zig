@@ -5,6 +5,7 @@
 	"repository": "https://github.com/TODO/TODO",
 	"author": "TODO",
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"start": "yarn build:zig && vite --open",
 		"build": "tsc && yarn build:zig-prod && vite build --base='./'",
@@ -26,14 +27,19 @@
 		"@thi.ng/wasm-api-dom": "latest",
 		"@thi.ng/wasm-api-schedule": "latest"
 	},
+	"browsersList": [
+		"last 3 chrome versions"
+	],
 	"browser": {
 		"process": false
 	},
 	"keywords": [
 		"hybrid",
+		"thing-umbrella",
 		"typescript",
 		"wasm",
 		"webassembly",
+		"zig",
 		"ziglang"
 	]
 }
