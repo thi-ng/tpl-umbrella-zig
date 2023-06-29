@@ -59,7 +59,7 @@ asdf local zig master
 
 -   [Zig](https://ziglang.org) v0.11-dev versions (by default) or v0.10, see
     [important
-    differences](https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api/README.md#using-the-zig-build-system))
+    differences](https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api/README.md#using-the-zig-build-system)
 -   [Binaryen](https://github.com/WebAssembly/binaryen)
 
 Please see the comments in
