@@ -1,7 +1,7 @@
 const std = @import("std");
 
 pub fn build(b: *std.Build) void {
-    @import("node_modules/@thi.ng/wasm-api/zig/build-v0.11.zig").wasmLib(b, .{
+    b.installArtifact(@import("node_modules/@thi.ng/wasm-api/zig/build.zig").wasmLib(b, .{
         // Declare extra WASM API packages to use
         // Each package can also declare dependencies to other such packages
         // (wasm-api and wasm-api-bindgen are made available everywhere)
@@ -13,5 +13,5 @@ pub fn build(b: *std.Build) void {
         // if commented out, we can pass CLI args to choose build mode (default: .Debug)
         // see build:zig-prod script alias in package.json
         // .optimize = .ReleaseSmall,
-    }).install();
+    }));
 }
