@@ -16,16 +16,16 @@
 	},
 	"devDependencies": {
 		"typescript": "^5.2.2",
-		"vite": "^4.4.9",
+		"vite": "^4.5.0",
 		"vite-plugin-html": "^3.2.0"
 	},
 	"dependencies": {
-		"@thi.ng/api": "^8.9.5",
-		"@thi.ng/logger": "^1.4.21",
-		"@thi.ng/wasm-api": "^1.4.19",
-		"@thi.ng/wasm-api-bindgen": "^0.4.14",
-		"@thi.ng/wasm-api-dom": "^0.11.36",
-		"@thi.ng/wasm-api-schedule": "^0.3.34"
+		"@thi.ng/api": "^8.9.6",
+		"@thi.ng/logger": "^1.4.22",
+		"@thi.ng/wasm-api": "^1.4.30",
+		"@thi.ng/wasm-api-bindgen": "^0.4.26",
+		"@thi.ng/wasm-api-dom": "^0.11.47",
+		"@thi.ng/wasm-api-schedule": "^0.3.45"
 	},
 	"browsersList": [
 		"last 3 chrome versions"
