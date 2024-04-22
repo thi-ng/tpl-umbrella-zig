@@ -38,11 +38,6 @@ yarn build
 yarn preview
 ```
 
-Note: The [vite-plugin-html](https://github.com/vbenjs/vite-plugin-html) used
-for minifying the HTML in production builds is currently causing deprecation
-warnings in Vite v5+. PRs for an alternative solution are much appreciated.
-Thanks!
-
 ## Requirements
 
 This template is configured for Zig version v0.12.0 or newer, which includes
