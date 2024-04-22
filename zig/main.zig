@@ -5,9 +5,9 @@ const dom = @import("wasm-api-dom");
 const schedule = @import("wasm-api-schedule").schedule;
 
 // this and the empty log stub fn are only needed for debug builds
-pub const std_options = struct {
-    pub const log_level = .info;
-    pub const logFn = log;
+pub const std_options: std.Options = .{
+    .log_level = .info,
+    .logFn = log,
 };
 
 pub fn log(
@@ -64,7 +64,7 @@ var styleID: usize = 0;
 // (see DummyModule in /src/index.ts for reference)
 pub extern "dummy" fn setStyle(ptr: *const types.StyleConfig) void;
 
-fn updateStyle(_: *const dom.Event, _: ?*anyopaque) void {
+fn updateStyle(_: *const dom.Event, _: ?*anyopaque) callconv(.C) void {
     setStyle(&styles[styleID]);
     styleID = @mod(styleID + 1, styles.len);
 }
