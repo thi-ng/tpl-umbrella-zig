@@ -10,8 +10,8 @@
 		"start": "yarn build:zig && vite --open",
 		"build": "tsc && yarn build:zig-prod && vite build --base='./'",
 		"build:types": "npx wasm-api-bindgen -a wasm-types-analysis.json --lang ts -o src/generated/types.ts --lang zig -o zig/generated/types.zig src/typedefs.json",
-		"build:zig": "zig build && cp zig-out/lib/main.wasm src/main.wasm && wasm-dis -o src/main.wast src/main.wasm",
-		"build:zig-prod": "zig build -Doptimize=ReleaseSmall && wasm-opt zig-out/lib/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
+		"build:zig": "zig build && cp zig-out/bin/main.wasm src/main.wasm && wasm-dis -o src/main.wast src/main.wasm",
+		"build:zig-prod": "zig build -Doptimize=ReleaseSmall && wasm-opt zig-out/bin/main.wasm -o src/main.wasm -Oz && wasm-dis -o src/main.wast src/main.wasm",
 		"preview": "vite preview --host --open"
 	},
 	"devDependencies": {
