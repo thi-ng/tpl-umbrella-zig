@@ -2,6 +2,7 @@
 /export
 /zig-cache
 /zig-out
+.zig-cache
 
 *.o
 *.wasm
