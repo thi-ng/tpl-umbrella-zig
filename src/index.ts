@@ -1,9 +1,9 @@
 import type { Fn0 } from "@thi.ng/api";
 import { ConsoleLogger, LogLevel } from "@thi.ng/logger";
 import { WasmBridge, type IWasmAPI, type WasmExports } from "@thi.ng/wasm-api";
-import { WasmDom, type WasmDomExports } from "@thi.ng/wasm-api-dom";
+import { WasmDomModule, type WasmDomExports } from "@thi.ng/wasm-api-dom";
 import {
-	WasmSchedule,
+	WasmScheduleModule,
 	type WasmScheduleExports,
 } from "@thi.ng/wasm-api-schedule";
 import { $StyleConfig } from "./generated/types";
@@ -20,12 +20,7 @@ interface WasmApp extends WasmExports, WasmDomExports, WasmScheduleExports {
  * Custom example WASM API module. Can safely be discarded or used as basis for
  * your own... See https://thi.ng/wasm-api for details/usage.
  */
-class DummyModule implements IWasmAPI<any> {
-	/**
-	 * Module ID, used to avoid namespace clashes in WASM imports
-	 */
-	readonly id = "dummy";
-
+class DummyModule implements IWasmAPI<WasmApp> {
 	parent!: WasmBridge<WasmApp>;
 
 	async init(parent: WasmBridge<WasmApp>) {
@@ -57,8 +52,14 @@ class DummyModule implements IWasmAPI<any> {
 (async () => {
 	// create WASM bridge
 	const bridge = new WasmBridge<WasmApp>(
-		// ...with extra API modules
-		[new DummyModule(), new WasmDom(), new WasmSchedule()],
+		// API module(s) declaration
+		[
+			{
+				id: "dummy",
+				deps: [WasmDomModule, WasmScheduleModule],
+				factory: () => new DummyModule(),
+			},
+		],
 		// (optional, custom logger)
 		new ConsoleLogger("wasm", LogLevel.INFO)
 		// (or uncomment below to disable all logging instead)
