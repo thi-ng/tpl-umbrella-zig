@@ -59,7 +59,7 @@ asdf global zig 0.14.1
 asdf local zig 0.14.1
 ```
 
--   [Zig](https://ziglang.org) v0.12.0 or newer versions (see
+-   [Zig](https://ziglang.org) v0.14.0 or newer versions (see
     [comments](https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api/README.md#using-the-zig-build-system))
 -   [Binaryen](https://github.com/WebAssembly/binaryen)
 
@@ -69,8 +69,8 @@ more details...
 
 ## Notes
 
-This template pulls in more dependencies than needed for the runtime of your
-actual app. Most of these additional packages are only required by the
+This template pulls in more transitive dependencies than needed for the runtime
+of your actual app. Most of these additional packages are only required by the
 [@thi.ng/wasm-api-bindgen](https://github.com/thi-ng/umbrella/tree/develop/packages/wasm-api-bindgen)
 CLI tool to generate source code for the types shared between the WASM/JS
 side... Feel free to remove that package if you're not making use of code
