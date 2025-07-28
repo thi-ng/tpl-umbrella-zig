@@ -40,20 +40,23 @@ yarn preview
 
 ## Requirements
 
-This template is configured for Zig version v0.12.0 or newer, which includes
+This template is configured for Zig version v0.14.0 or newer, which includes
 several breaking changes to the earlier build system. You can download the
 latest version from the Zig website or (my own preferred method) using
 [asdf](https://asdf-vm.com/) to install it (even just locally for this project):
 
 ```bash
+# if needed, first install zig plugin for asdf
+asdf plugin-add zig https://github.com/cheetah/asdf-zig.git
+
 # asdf supports multiple versions of a tool, here to install latest dev version
-asdf install zig 0.12.0
+asdf install zig 0.14.1
 
 # global use of that version
-asdf global zig 0.12.0
+asdf global zig 0.14.1
 
-# only use that version in this project (already pre-configured)
-asdf local zig 0.12.0
+# or only use that version in this project (already pre-configured)
+asdf local zig 0.14.1
 ```
 
 -   [Zig](https://ziglang.org) v0.12.0 or newer versions (see
@@ -77,4 +80,4 @@ generation.
 
 This project is licensed under the MIT License. See LICENSE.txt
 
-&copy; 2022 - 2024 Karsten Schmidt
+&copy; 2022 - 2025 Karsten Schmidt

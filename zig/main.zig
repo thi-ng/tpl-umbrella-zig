@@ -12,7 +12,7 @@ pub const std_options: std.Options = .{
 
 pub fn log(
     comptime _: std.log.Level,
-    comptime _: @Type(.EnumLiteral),
+    comptime _: @Type(.enum_literal),
     comptime _: []const u8,
     _: anytype,
 ) void {}
