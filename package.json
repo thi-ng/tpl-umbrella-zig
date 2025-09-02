@@ -22,10 +22,10 @@
 	"dependencies": {
 		"@thi.ng/api": "^8.12.2",
 		"@thi.ng/logger": "^3.1.17",
-		"@thi.ng/wasm-api": "^2.4.0",
-		"@thi.ng/wasm-api-bindgen": "^1.2.39",
-		"@thi.ng/wasm-api-dom": "^2.0.0",
-		"@thi.ng/wasm-api-schedule": "^1.0.49"
+		"@thi.ng/wasm-api": "^2.4.1",
+		"@thi.ng/wasm-api-bindgen": "^1.2.40",
+		"@thi.ng/wasm-api-dom": "^2.0.1",
+		"@thi.ng/wasm-api-schedule": "^1.0.50"
 	},
 	"browsersList": [
 		"last 3 chrome versions"
