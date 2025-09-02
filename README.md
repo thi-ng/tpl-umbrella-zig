@@ -40,7 +40,7 @@ yarn preview
 
 ## Requirements
 
-This template is configured for Zig version v0.14.0 or newer, which includes
+This template is configured for Zig version v0.15.1 or newer, which includes
 several breaking changes to the earlier build system. You can download the
 latest version from the Zig website or (my own preferred method) using
 [asdf](https://asdf-vm.com/) to install it (even just locally for this project):
