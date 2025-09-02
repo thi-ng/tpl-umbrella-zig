@@ -61,7 +61,7 @@ var styleID: usize = 0;
 // (see DummyModule in /src/index.ts for reference)
 pub extern "dummy" fn setStyle(ptr: *const types.StyleConfig) void;
 
-fn updateStyle(_: *const dom.types.Event, _: ?*anyopaque) callconv(.C) void {
+fn updateStyle(_: *const dom.types.Event, _: ?*anyopaque) callconv(.c) void {
     setStyle(&styles[styleID]);
     styleID = @mod(styleID + 1, styles.len);
 }
