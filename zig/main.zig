@@ -17,9 +17,6 @@ pub fn log(
     _: anytype,
 ) void {}
 
-// expose thi.ng/wasm-api core API (incl. panic handler & allocation fns)
-pub usingnamespace wasm;
-
 // allocator, also exposed & used by JS-side WasmBridge & DOM module
 // see further comments in:
 // https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api/zig/lib.zig
@@ -64,7 +61,7 @@ var styleID: usize = 0;
 // (see DummyModule in /src/index.ts for reference)
 pub extern "dummy" fn setStyle(ptr: *const types.StyleConfig) void;
 
-fn updateStyle(_: *const dom.Event, _: ?*anyopaque) callconv(.C) void {
+fn updateStyle(_: *const dom.types.Event, _: ?*anyopaque) callconv(.C) void {
     setStyle(&styles[styleID]);
     styleID = @mod(styleID + 1, styles.len);
 }
@@ -82,7 +79,7 @@ fn dummyInit() void {
                 .tag = "button",
                 .text = "Click me!",
                 .attribs = dom.attribs(&.{
-                    dom.Attrib.event("click", updateStyle, null),
+                    dom.types.Attrib.event("click", updateStyle, null),
                 }),
             },
         }),
